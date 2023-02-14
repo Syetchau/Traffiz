@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/frag_bg_color"
+    tools:context=".activity.CameraDetailActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/bg_toolbar"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:src="@drawable/ic_arrow_back"
+            android:tint="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_title"
+            style="@style/title_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_camera_detail"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_camera_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cl_toolbar" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_time_stamp_label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MyTheme.TextView.Body"
+        android:text="@string/label_timestamp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.3"
+        app:layout_constraintTop_toBottomOf="@id/iv_camera_image"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_time_stamp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MyTheme.TextView.Body"
+        tools:text="2022-2-22"
+        app:layout_constraintStart_toEndOf="@id/tv_time_stamp_label"
+        app:layout_constraintWidth_percent="0.7"
+        app:layout_constraintTop_toBottomOf="@id/iv_camera_image"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_camera_id_label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MyTheme.TextView.Body"
+        android:text="@string/label_camera_id"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.3"
+        app:layout_constraintTop_toBottomOf="@id/tv_time_stamp_label"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_camera_id"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MyTheme.TextView.Body"
+        tools:text="1234"
+        app:layout_constraintStart_toEndOf="@id/tv_time_stamp_label"
+        app:layout_constraintWidth_percent="0.7"
+        app:layout_constraintTop_toBottomOf="@id/tv_time_stamp"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_location_label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MyTheme.TextView.Body"
+        android:text="@string/label_location"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.3"
+        app:layout_constraintTop_toBottomOf="@id/tv_camera_id_label"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_location_lat_label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MyTheme.TextView.Body"
+        android:text="@string/label_latitude"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.3"
+        app:layout_constraintTop_toBottomOf="@id/tv_location_label"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_location_lat"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MyTheme.TextView.Body"
+        tools:text="1234.1234"
+        app:layout_constraintStart_toEndOf="@id/tv_location_lat_label"
+        app:layout_constraintWidth_percent="0.6"
+        app:layout_constraintTop_toBottomOf="@id/tv_location_label"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_location_lng_label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MyTheme.TextView.Body"
+        android:text="@string/label_longitude"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.3"
+        app:layout_constraintTop_toBottomOf="@id/tv_location_lat_label"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_location_lng"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MyTheme.TextView.Body"
+        tools:text="1234.1234"
+        app:layout_constraintStart_toEndOf="@id/tv_location_lng_label"
+        app:layout_constraintWidth_percent="0.6"
+        app:layout_constraintTop_toBottomOf="@id/tv_location_lat_label"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_metadata_label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MyTheme.TextView.Body"
+        android:text="@string/label_image_metadata"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.3"
+        app:layout_constraintTop_toBottomOf="@id/tv_location_lng_label"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_metadata_height_label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MyTheme.TextView.Body"
+        android:text="@string/label_height"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.3"
+        app:layout_constraintTop_toBottomOf="@id/tv_metadata_label"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_metadata_height"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MyTheme.TextView.Body"
+        tools:text="120"
+        app:layout_constraintStart_toEndOf="@id/tv_metadata_height_label"
+        app:layout_constraintWidth_percent="0.6"
+        app:layout_constraintTop_toBottomOf="@id/tv_metadata_label"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_metadata_width_label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MyTheme.TextView.Body"
+        android:text="@string/label_width"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.3"
+        app:layout_constraintTop_toBottomOf="@id/tv_metadata_height_label"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_metadata_width"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MyTheme.TextView.Body"
+        tools:text="120"
+        app:layout_constraintStart_toEndOf="@id/tv_metadata_width_label"
+        app:layout_constraintWidth_percent="0.6"
+        app:layout_constraintTop_toBottomOf="@id/tv_metadata_height_label"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_metadata_md5_label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MyTheme.TextView.Body"
+        android:text="@string/label_md5"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.3"
+        app:layout_constraintTop_toBottomOf="@id/tv_metadata_width_label"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_metadata_md5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MyTheme.TextView.Body"
+        tools:text="xxx.xxx"
+        app:layout_constraintStart_toEndOf="@id/tv_metadata_md5_label"
+        app:layout_constraintWidth_percent="0.6"
+        app:layout_constraintTop_toBottomOf="@id/tv_metadata_width_label"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_favourite"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:src="@drawable/ic_favourite_off"
+        app:layout_constraintWidth_percent="0.3"
+        app:layout_constraintTop_toBottomOf="@id/tv_metadata_md5"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

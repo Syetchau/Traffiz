@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Trafficz</string>
+
+    <string name="label_pls_wait">Please wait…</string>
+    <string name="label_warning">Warning</string>
+    <string name="label_username">Username</string>
+    <string name="label_password">Password</string>
+    <string name="label_hello">Hello</string>
+    <string name="label_map">Map</string>
+    <string name="label_camera">Camera</string>
+    <string name="label_search_by_camera_id">Search by Camera Id</string>
+    <string name="label_location">Location:</string>
+    <string name="label_image_metadata">Image metadata:</string>
+    <string name="label_timestamp">Time: </string>
+    <string name="label_camera_id">Camera Id: </string>
+    <string name="label_latitude">Latitude: </string>
+    <string name="label_longitude">Longitude: </string>
+    <string name="label_height">Height: </string>
+    <string name="label_width">Width: </string>
+    <string name="label_md5">Md5: </string>
+    <string name="label_camera_detail">Camera Detail</string>
+
+    <string name="action_confirm">Confirm</string>
+    <string name="action_login">Login</string>
+
+    <string name="warning_username_empty">Username is empty!</string>
+    <string name="warning_password_empty">Password is empty!</string>
+    <string name="warning_username_length_error">Failed to create user!\n Username length mismatch criteria!</string>
+    <string name="warning_password_failed_fulfill">Failed to create user!\n Password not match criteria!</string>
+    <string name="warning_login_failed">Login Failed!\n Password not match!</string>
+</resources>
