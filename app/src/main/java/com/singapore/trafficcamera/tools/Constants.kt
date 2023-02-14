@@ -19,7 +19,7 @@ object Constants {
     const val IMAGE_HEIGHT: Int = 375
 
     const val HEALTHY = "healthy"
-    const val API_KEY = "AIzaSyCr3Abm_IKhqs0pTZhhKVM0NHzL7OXJVpY"
+    const val API_KEY = "{GOOGLE_API_KEY}"
 
     const val TAG_MAP = "MAP"
     const val TAG_CAMERA = "CAMERA"
